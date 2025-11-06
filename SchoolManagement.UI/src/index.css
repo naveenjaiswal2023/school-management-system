@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* School Management System Design System
+All colors MUST be HSL.
+Enterprise-grade, modern aesthetic for educational institutions.
+Professional, sophisticated, and visually striking design.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Enhanced with warmer tones */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+    
+    /* Brand colors - Enhanced gradient system */
+    --brand-primary: 262 83% 58%;
+    --brand-primary-light: 262 90% 68%;
+    --brand-secondary: 221 83% 53%;
+    --brand-accent: 200 98% 39%;
+    --brand-accent-light: 200 98% 49%;
+    
+    /* Educational theme colors - More vibrant */
+    --education-blue: 217 91% 60%;
+    --education-green: 142 69% 58%;
+    --education-orange: 25 95% 53%;
+    --education-purple: 268 83% 58%;
+    --education-pink: 330 81% 60%;
+    --education-teal: 172 66% 50%;
+
+    /* Enhanced semantic colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+    
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 222 84% 4.9%;
+    
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 200 98% 39%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 262 83% 58%;
+    
+    /* Enhanced gradients - Multi-color and more sophisticated */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 50%, hsl(var(--brand-accent)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--brand-accent)) 0%, hsl(var(--education-blue)) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(var(--education-green)) 0%, hsl(var(--education-teal)) 100%);
+    --gradient-warning: linear-gradient(135deg, hsl(var(--education-orange)) 0%, hsl(var(--education-pink)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-accent)) 25%, hsl(var(--education-purple)) 50%, hsl(var(--education-blue)) 75%, hsl(var(--brand-accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 13% 98%) 100%);
+    --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.05) 100%);
+    
+    /* Enhanced shadows - More depth and brand-colored shadows */
+    --shadow-card: 0 4px 6px -1px hsl(220 14% 15% / 0.1), 0 2px 4px -1px hsl(220 14% 15% / 0.06);
+    --shadow-elevated: 0 20px 25px -5px hsl(220 14% 15% / 0.1), 0 10px 10px -5px hsl(220 14% 15% / 0.04);
+    --shadow-brand: 0 25px 50px -12px hsl(var(--brand-primary) / 0.25), 0 0 0 1px hsl(var(--brand-primary) / 0.05);
+    --shadow-glow: 0 0 50px hsl(var(--brand-primary) / 0.15);
+    --shadow-glass: inset 0 1px 0 0 hsl(0 0% 100% / 0.1);
+    --shadow-inner: inset 0 2px 4px 0 hsl(0 0% 0% / 0.06);
+    
+    /* School-specific status colors */
+    --status-present: 142 69% 58%;
+    --status-absent: 0 84% 60%;
+    --status-late: 25 95% 53%;
+    --status-pending: 268 83% 58%;
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Enterprise Professional Dark Theme - Corporate sophistication */
+    --background: 220 18% 8%;
+    --foreground: 210 15% 95%;
+    
+    /* Professional brand colors - Muted and sophisticated */
+    --brand-primary: 217 28% 45%;
+    --brand-primary-light: 217 28% 55%;
+    --brand-secondary: 220 18% 35%;
+    --brand-accent: 200 18% 46%;
+    --brand-accent-light: 200 20% 56%;
+    
+    /* Educational theme colors - Corporate palette */
+    --education-blue: 217 28% 50%;
+    --education-green: 142 35% 48%;
+    --education-orange: 25 55% 53%;
+    --education-purple: 268 35% 50%;
+    --education-pink: 330 35% 52%;
+    --education-teal: 172 30% 45%;
+
+    --card: 220 18% 11%;
+    --card-foreground: 210 15% 95%;
+
+    --popover: 220 18% 12%;
+    --popover-foreground: 210 15% 95%;
+
+    --primary: 217 28% 45%;
+    --primary-foreground: 210 15% 98%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 210 15% 95%;
+
+    --muted: 220 15% 16%;
+    --muted-foreground: 215 10% 65%;
+
+    --accent: 200 18% 46%;
+    --accent-foreground: 210 15% 98%;
+
+    --destructive: 0 55% 55%;
+    --destructive-foreground: 210 15% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 217 28% 45%;
+    
+    /* Professional gradients - Subtle and sophisticated */
+    --gradient-primary: linear-gradient(135deg, hsl(220 18% 12%) 0%, hsl(220 18% 15%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(217 28% 45% / 0.15) 0%, hsl(200 18% 46% / 0.15) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 35% 48% / 0.15) 0%, hsl(172 30% 45% / 0.15) 100%);
+    --gradient-warning: linear-gradient(135deg, hsl(25 55% 53% / 0.15) 0%, hsl(330 35% 52% / 0.15) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 18% 10%) 0%, hsl(217 28% 45% / 0.1) 50%, hsl(220 18% 12%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 18% 11%) 0%, hsl(220 18% 13%) 100%);
+    --gradient-glass: linear-gradient(145deg, hsl(0 0% 100% / 0.02) 0%, hsl(0 0% 100% / 0.01) 100%);
+    
+    /* Professional shadows - Subtle depth */
+    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.3), 0 4px 16px -4px hsl(0 0% 0% / 0.2);
+    --shadow-elevated: 0 8px 24px -4px hsl(0 0% 0% / 0.4), 0 16px 48px -8px hsl(0 0% 0% / 0.3);
+    --shadow-brand: 0 4px 16px -2px hsl(217 28% 45% / 0.2), 0 0 0 1px hsl(217 28% 45% / 0.1);
+    --shadow-glow: 0 0 24px hsl(217 28% 45% / 0.15);
+    --shadow-glass: inset 0 1px 0 0 hsl(0 0% 100% / 0.02);
+    --shadow-inner: inset 0 2px 4px 0 hsl(0 0% 0% / 0.3);
+    
+    /* Status colors - Professional palette */
+    --status-present: 142 35% 48%;
+    --status-absent: 0 55% 55%;
+    --status-late: 25 55% 53%;
+    --status-pending: 268 35% 50%;
+
+    --sidebar-background: 220 18% 9%;
+    --sidebar-foreground: 210 15% 90%;
+    --sidebar-primary: 217 28% 45%;
+    --sidebar-primary-foreground: 210 15% 98%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 210 15% 95%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 217 28% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer components {
+  /* Glass morphism utilities */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border) / 0.2);
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Enhanced card with gradient background */
+  .card-gradient {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Glow effect for interactive elements */
+  .glow-on-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glow-on-hover:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  /* Animated gradient backgrounds */
+  .gradient-animated {
+    background: var(--gradient-hero);
+    background-size: 300% 300%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Professional button hover effects */
+  .btn-professional {
+    @apply relative overflow-hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-professional::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+
+  .btn-professional:hover::before {
+    transform: translateX(100%);
+  }
+
+  /* Enhanced focus states */
+  .focus-enhanced:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+    box-shadow: var(--shadow-brand);
+  }
+}

@@ -1,0 +1,6 @@
+@HRMSService.API_HostAddress = http://localhost:5124
+
+GET {{HRMSService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
