@@ -115,19 +115,6 @@ API → Application → Domain ← Infrastructure ← Persistence
 
 ## Microservices Architecture
 
-### Service Catalog
-
-| Service Name | Responsibility | Port | Technology |
-|--------------|----------------|------|------------|
-| **SchoolManagement.API** | Core service: Role management, Menu permissions, Authorization, Student/Employee CRUD | 5000 | ASP.NET Core 8.0 |
-| **StudentManagement.API** | Student-specific operations, Academic records | 5001 | ASP.NET Core 8.0 |
-| **AttendanceService.API** | Real-time attendance tracking, Biometric integration | 5002 | ASP.NET Core 8.0 |
-| **ExaminationService.API** | Exam management, Result processing | 5003 | ASP.NET Core 8.0 |
-| **FeeManagement.API** | Fee structure, Payment processing | 5004 | ASP.NET Core 8.0 |
-| **HRMSService.API** | Employee management, Payroll, Leave | 5005 | ASP.NET Core 8.0 |
-| **UserManagement.API** | User authentication, Profile management | 5006 | ASP.NET Core 8.0 |
-| **NotificationService.API** | Email, SMS, Push notifications | 5007 | ASP.NET Core 8.0 |
-
 ### Service Communication Patterns
 
 #### Synchronous Communication
@@ -311,41 +298,42 @@ Application/
 ## Technology Stack
 
 ### Backend
-| Component | Technology | Version | Purpose |
-|-----------|-----------|---------|---------|
-| Framework | .NET Core | 8.0 | API development |
-| ORM | Entity Framework Core | 8.0 | Data access |
-| Mediator | MediatR | 12.x | CQRS implementation |
-| Validation | FluentValidation | 11.x | Input validation |
-| Authentication | JWT Bearer | 8.0 | Token-based auth |
-| Logging | Serilog | 3.x | Structured logging |
-| API Documentation | Swagger/OpenAPI | 6.5 | API documentation |
+| Component           | Technology           | Version | Purpose                   |
+|---------------------|----------------------|---------|---------------------------|
+| Framework           | .NET Core            | 8.0     | API development           |
+| ORM                 | Entity Framework Core| 8.0     | Data access               |
+| Mediator            | MediatR              | 12.x    | CQRS implementation       |
+| Validation          | FluentValidation     | 11.x    | Input validation          |
+| Authentication      | JWT Bearer           | 8.0     | Token-based authentication|
+| Logging             | Serilog              | 3.x     | Structured logging        |
+| API Documentation   | Swagger / OpenAPI    | 6.5     | API documentation         |
 
 ### Frontend (Separate Repository)
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| Framework | React | 18.x | UI framework |
-| Language | TypeScript | 5.x | Type safety |
-| State Management | Context API | Built-in | Global state |
-| Routing | React Router | 6.x | Navigation |
-| HTTP Client | Axios | 1.x | API calls |
+| Component           | Technology           | Version | Purpose                   |
+|---------------------|----------------------|---------|---------------------------|
+| Framework           | React                | 18.x    | UI framework              |
+| Language            | TypeScript           | 5.x     | Type safety               |
+| State Management    | Context API          | Built-in| Global state management   |
+| Routing             | React Router         | 6.x     | Navigation and routing    |
+| HTTP Client         | Axios                | 1.x     | API requests handling     |
 
 ### Database
-| Type | Technology | Purpose |
-|------|-----------|---------|
-| Primary DB | SQL Server | 2022 | Relational data |
-| Future: Cache | Redis | N/A | Performance optimization |
-| Future: Queue | RabbitMQ/Azure Service Bus | N/A | Message queuing |
+| Type                | Technology           | Version | Purpose                   |
+|---------------------|----------------------|---------|---------------------------|
+| Primary Database    | SQL Server           | 2022    | Relational data storage   |
+| Future: Cache       | Redis                | N/A     | Performance optimization  |
+| Future: Queue       | RabbitMQ / Azure Service Bus | N/A | Message queuing and asynchronous processing |
 
 ### DevOps & Infrastructure
-| Component | Technology | Purpose |
-|-----------|-----------|---------|
-| Version Control | Git | Source control |
-| Container | Docker | Containerization |
-| Orchestration | Docker Compose | Local development |
-| CI/CD | Azure DevOps / GitHub Actions | Automation |
-| Hosting | Azure App Service | Cloud hosting |
-| Monitoring | Application Insights | APM |
+| Component           | Technology           | Version | Purpose                   |
+|---------------------|----------------------|---------|---------------------------|
+| Version Control     | Git                  | Latest  | Source control and collaboration |
+| Containerization    | Docker               | Latest  | Container-based environment |
+| Orchestration       | Docker Compose       | Latest  | Local multi-container setup |
+| CI/CD               | Azure DevOps / GitHub Actions | Latest | Continuous integration and deployment |
+| Hosting             | Azure App Service    | Latest  | Cloud hosting             |
+| Monitoring          | Application Insights | Latest  | Application performance monitoring |
+
 
 ---
 
